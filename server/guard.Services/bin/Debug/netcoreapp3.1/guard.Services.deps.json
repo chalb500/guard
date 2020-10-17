@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "guard.Services/1.0.0": {
+        "dependencies": {
+          "guard.Core": "1.0.0"
+        },
+        "runtime": {
+          "guard.Services.dll": {}
+        }
+      },
+      "guard.Core/1.0.0": {
+        "runtime": {
+          "guard.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "guard.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "guard.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

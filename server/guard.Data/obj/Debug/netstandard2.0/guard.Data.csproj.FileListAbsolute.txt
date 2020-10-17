@@ -1,0 +1,4 @@
+c:\Sandbox\guard\server\guard.Data\obj\Debug\netstandard2.0\guard.Data.csprojAssemblyReference.cache
+c:\Sandbox\guard\server\guard.Data\obj\Debug\netstandard2.0\guard.Data.AssemblyInfoInputs.cache
+c:\Sandbox\guard\server\guard.Data\obj\Debug\netstandard2.0\guard.Data.AssemblyInfo.cs
+c:\Sandbox\guard\server\guard.Data\obj\Debug\netstandard2.0\guard.Data.csproj.CoreCompileInputs.cache

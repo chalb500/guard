@@ -1,0 +1,9 @@
+c:\Sandbox\guard\server\guard.Core\bin\Debug\netcoreapp3.1\guard.Core.deps.json
+c:\Sandbox\guard\server\guard.Core\bin\Debug\netcoreapp3.1\guard.Core.dll
+c:\Sandbox\guard\server\guard.Core\bin\Debug\netcoreapp3.1\guard.Core.pdb
+c:\Sandbox\guard\server\guard.Core\obj\Debug\netcoreapp3.1\guard.Core.csprojAssemblyReference.cache
+c:\Sandbox\guard\server\guard.Core\obj\Debug\netcoreapp3.1\guard.Core.AssemblyInfoInputs.cache
+c:\Sandbox\guard\server\guard.Core\obj\Debug\netcoreapp3.1\guard.Core.AssemblyInfo.cs
+c:\Sandbox\guard\server\guard.Core\obj\Debug\netcoreapp3.1\guard.Core.csproj.CoreCompileInputs.cache
+c:\Sandbox\guard\server\guard.Core\obj\Debug\netcoreapp3.1\guard.Core.dll
+c:\Sandbox\guard\server\guard.Core\obj\Debug\netcoreapp3.1\guard.Core.pdb

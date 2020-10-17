@@ -1,0 +1,15 @@
+c:\Sandbox\guard\server\guard.Data\obj\Debug\netcoreapp3.1\guard.Data.csprojAssemblyReference.cache
+c:\Sandbox\guard\server\guard.Data\obj\Debug\netcoreapp3.1\guard.Data.AssemblyInfoInputs.cache
+c:\Sandbox\guard\server\guard.Data\obj\Debug\netcoreapp3.1\guard.Data.AssemblyInfo.cs
+c:\Sandbox\guard\server\guard.Data\obj\Debug\netcoreapp3.1\guard.Data.csproj.CoreCompileInputs.cache
+c:\Sandbox\guard\server\guard.Data\bin\Debug\netcoreapp3.1\guard.Data.deps.json
+c:\Sandbox\guard\server\guard.Data\bin\Debug\netcoreapp3.1\guard.Data.runtimeconfig.json
+c:\Sandbox\guard\server\guard.Data\bin\Debug\netcoreapp3.1\guard.Data.runtimeconfig.dev.json
+c:\Sandbox\guard\server\guard.Data\bin\Debug\netcoreapp3.1\guard.Data.dll
+c:\Sandbox\guard\server\guard.Data\bin\Debug\netcoreapp3.1\guard.Data.pdb
+c:\Sandbox\guard\server\guard.Data\bin\Debug\netcoreapp3.1\guard.Core.dll
+c:\Sandbox\guard\server\guard.Data\bin\Debug\netcoreapp3.1\guard.Core.pdb
+c:\Sandbox\guard\server\guard.Data\obj\Debug\netcoreapp3.1\guard.Data.csproj.CopyComplete
+c:\Sandbox\guard\server\guard.Data\obj\Debug\netcoreapp3.1\guard.Data.dll
+c:\Sandbox\guard\server\guard.Data\obj\Debug\netcoreapp3.1\guard.Data.pdb
+c:\Sandbox\guard\server\guard.Data\obj\Debug\netcoreapp3.1\guard.Data.genruntimeconfig.cache

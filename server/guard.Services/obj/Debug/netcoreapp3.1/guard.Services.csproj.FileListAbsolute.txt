@@ -1,0 +1,12 @@
+c:\Sandbox\guard\server\guard.Services\bin\Debug\netcoreapp3.1\guard.Services.deps.json
+c:\Sandbox\guard\server\guard.Services\bin\Debug\netcoreapp3.1\guard.Services.dll
+c:\Sandbox\guard\server\guard.Services\bin\Debug\netcoreapp3.1\guard.Services.pdb
+c:\Sandbox\guard\server\guard.Services\bin\Debug\netcoreapp3.1\guard.Core.dll
+c:\Sandbox\guard\server\guard.Services\bin\Debug\netcoreapp3.1\guard.Core.pdb
+c:\Sandbox\guard\server\guard.Services\obj\Debug\netcoreapp3.1\guard.Services.csprojAssemblyReference.cache
+c:\Sandbox\guard\server\guard.Services\obj\Debug\netcoreapp3.1\guard.Services.AssemblyInfoInputs.cache
+c:\Sandbox\guard\server\guard.Services\obj\Debug\netcoreapp3.1\guard.Services.AssemblyInfo.cs
+c:\Sandbox\guard\server\guard.Services\obj\Debug\netcoreapp3.1\guard.Services.csproj.CoreCompileInputs.cache
+c:\Sandbox\guard\server\guard.Services\obj\Debug\netcoreapp3.1\guard.Services.csproj.CopyComplete
+c:\Sandbox\guard\server\guard.Services\obj\Debug\netcoreapp3.1\guard.Services.dll
+c:\Sandbox\guard\server\guard.Services\obj\Debug\netcoreapp3.1\guard.Services.pdb
