@@ -7,21 +7,26 @@ using guard.Core.Repositories;
 
 namespace guard.Data.Repositories
 {
-    public class EmployeeRepository : Repository<Employee>, IEmployeeRepository
+  public class EmployeeRepository : Repository<Employee>, IEmployeeRepository
+  {
+    public EmployeeRepository(GuardDBContext context) : base(context)
+    { }
+
+    public async Task<IEnumerable<Employee>> GetEmployeesAsync() => await GuardDBContext.Employees
+            .ToListAsync();
+    public async Task<Employee> GetEmployeeWithIdAsync(int id)
     {
-        public EmployeeRepository(GuardDBContext context) : base(context)
-        {}
-
-        public async Task<IEnumerable<Employee>> GetEmployeesAsync() => await GuardDBContext.Employees
-                .ToListAsync();
-        public async Task<Employee> GetEmployeeWithIdAsync(int id)
-        {
-            return await GuardDBContext.Employees.FirstOrDefaultAsync(m => m.Id == id);
-        }
-
-        private GuardDBContext GuardDBContext
-        {
-            get { return Context as GuardDBContext; }
-        }
+      return await GuardDBContext.Employees.FirstOrDefaultAsync(m => m.Id == id);
     }
+
+    public async Task<Employee> GetEmployeeByEmailAsync(string email)
+    {
+      return await GuardDBContext.Employees.SingleOrDefaultAsync(x => x.Email == email);
+    }
+
+    private GuardDBContext GuardDBContext
+    {
+      get { return Context as GuardDBContext; }
+    }
+  }
 }

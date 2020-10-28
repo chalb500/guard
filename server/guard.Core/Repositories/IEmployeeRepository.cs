@@ -4,10 +4,10 @@ using guard.Core.Models;
 
 namespace guard.Core.Repositories
 {
-    public interface IEmployeeRepository : IRepository <Employee>
-    {
-        Task<IEnumerable<Employee>> GetAllAsync();
-        Task<Employee> GetEmployeeWithIdAsync(int id);
-        
-    }
+  public interface IEmployeeRepository : IRepository<Employee>
+  {
+    Task<IEnumerable<Employee>> GetAllAsync();
+    Task<Employee> GetEmployeeWithIdAsync(int id);
+    Task<Employee> GetEmployeeByEmailAsync(string email);
+  }
 }

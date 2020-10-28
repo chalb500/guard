@@ -24,54 +24,55 @@ using AutoMapper;
 
 namespace server
 {
-    public class Startup
+  public class Startup
+  {
+    public Startup(IConfiguration configuration)
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddControllers();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddTransient<IEmployeeService, EmployeeService>();
-            services.AddDbContext<GuardDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default"), x => x.MigrationsAssembly("guard.Data")));
-            services.AddSwaggerGen(options =>
-                {
-                    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Guard Services", Version = "v1" });
-                });
-            services.AddAutoMapper(typeof(Startup));
-        }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            app.UseHttpsRedirection();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
-            app.UseSwagger();
-
-            app.UseSwaggerUI(c =>
-            {
-            c.RoutePrefix = "";
-            c.SwaggerEndpoint("/swagger/v1/swagger.json", "Guard V1");
-            });
-        }
+      Configuration = configuration;
     }
+
+    public IConfiguration Configuration { get; }
+
+    // This method gets called by the runtime. Use this method to add services to the container.
+    public void ConfigureServices(IServiceCollection services)
+    {
+      services.AddScoped<ITokenService, TokenService>();
+      services.AddControllers();
+      services.AddScoped<IUnitOfWork, UnitOfWork>();
+      services.AddTransient<IEmployeeService, EmployeeService>();
+      services.AddDbContext<GuardDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default"), x => x.MigrationsAssembly("guard.Data")));
+      services.AddSwaggerGen(options =>
+          {
+            options.SwaggerDoc("v1", new OpenApiInfo { Title = "Guard Services", Version = "v1" });
+          });
+      services.AddAutoMapper(typeof(Startup));
+    }
+
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+      if (env.IsDevelopment())
+      {
+        app.UseDeveloperExceptionPage();
+      }
+
+      app.UseHttpsRedirection();
+
+      app.UseRouting();
+
+      app.UseAuthorization();
+
+      app.UseEndpoints(endpoints =>
+      {
+        endpoints.MapControllers();
+      });
+      app.UseSwagger();
+
+      app.UseSwaggerUI(c =>
+      {
+        c.RoutePrefix = "";
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Guard V1");
+      });
+    }
+  }
 }

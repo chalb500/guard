@@ -4,19 +4,17 @@ using guard.Data.Configurations;
 
 namespace guard.Data
 {
-    public class GuardDBContext : DbContext
+  public class GuardDBContext : DbContext
+  {
+    public DbSet<Employee> Employees { get; set; }
+    public GuardDBContext(DbContextOptions<GuardDBContext> options)
+        : base(options)
+    { }
+
+    protected override void OnModelCreating(ModelBuilder builder)
     {
-        public DbSet<Employee> Employees { get; set; }
-        public GuardDBContext(DbContextOptions<GuardDBContext> options)
-            : base(options)
-        { }
-
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            builder
-                .ApplyConfiguration(new EmployeeConfiguration());
-        }
-
-        
+      builder
+          .ApplyConfiguration(new EmployeeConfiguration());
     }
+  }
 }
