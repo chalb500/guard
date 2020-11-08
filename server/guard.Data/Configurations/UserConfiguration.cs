@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace guard.Data.Configurations
 {
-  public class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
+  public class UserConfiguration : IEntityTypeConfiguration<User>
   {
-    public void Configure(EntityTypeBuilder<Employee> builder)
+    public void Configure(EntityTypeBuilder<User> builder)
     {
       builder
           .HasKey(m => m.Id);
@@ -16,25 +16,16 @@ namespace guard.Data.Configurations
           .UseIdentityColumn();
 
       builder
-          .Property(m => m.FirstName)
-          .IsRequired()
-          .HasMaxLength(50);
-
-      builder
-          .Property(m => m.LastName)
-          .IsRequired()
-          .HasMaxLength(50);
-
-      builder
           .Property(m => m.PasswordHash)
           .IsRequired();
 
       builder
           .Property(m => m.PasswordSalt)
           .IsRequired();
-
       builder
-          .ToTable("Employees");
+          .HasOne(m => m.UserProfile);
+      builder
+          .ToTable("Users");
     }
   }
 }

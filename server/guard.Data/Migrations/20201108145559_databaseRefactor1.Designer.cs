@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using guard.Data;
 
 namespace guard.Data.Migrations
 {
     [DbContext(typeof(GuardDBContext))]
-    partial class GuardDBContextModelSnapshot : ModelSnapshot
+    [Migration("20201108145559_databaseRefactor1")]
+    partial class databaseRefactor1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,12 +44,7 @@ namespace guard.Data.Migrations
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UserProfileProfileId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserProfileProfileId");
 
                     b.ToTable("Users");
                 });
@@ -71,16 +68,24 @@ namespace guard.Data.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("ProfileId");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("UserProfiles");
                 });
 
-            modelBuilder.Entity("guard.Core.Models.User", b =>
+            modelBuilder.Entity("guard.Core.Models.UserProfile", b =>
                 {
-                    b.HasOne("guard.Core.Models.UserProfile", "UserProfile")
-                        .WithMany()
-                        .HasForeignKey("UserProfileProfileId");
+                    b.HasOne("guard.Core.Models.User", "User")
+                        .WithOne("UserProfile")
+                        .HasForeignKey("guard.Core.Models.UserProfile", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

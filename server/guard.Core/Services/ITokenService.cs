@@ -4,6 +4,6 @@ namespace guard.Core.Services
 {
   public interface ITokenService
   {
-    string CreateToken(Employee employee);
+    string CreateToken(User user);
   }
 }

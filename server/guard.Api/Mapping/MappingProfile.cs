@@ -1,5 +1,5 @@
 using AutoMapper;
-using guard.Api.Resources;
+using guard.Api.DTOs;
 using guard.Core.Models;
 
 namespace guard.Api.Mapping
@@ -9,10 +9,15 @@ namespace guard.Api.Mapping
         public MappingProfile()
         {
             //Domain to Resource
-            CreateMap<Employee, EmployeeResource>();
+            CreateMap<User, UserDto>();
 
             // Resource to Domain
-            CreateMap<EmployeeResource, Employee>();
+            CreateMap<UserDto, User>();
+
+            CreateMap<UserProfile, UserProfileDto>();
+
+            CreateMap<UserProfileDto, UserProfile>();
         }
+
     }
 }

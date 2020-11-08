@@ -39,7 +39,7 @@ namespace server
       services.AddScoped<ITokenService, TokenService>();
       services.AddControllers();
       services.AddScoped<IUnitOfWork, UnitOfWork>();
-      services.AddTransient<IEmployeeService, EmployeeService>();
+      services.AddTransient<IUserService, UserService>();
       services.AddDbContext<GuardDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default"), x => x.MigrationsAssembly("guard.Data")));
       services.AddSwaggerGen(options =>
           {

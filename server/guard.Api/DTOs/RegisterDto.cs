@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace server.guard.Api.DTOs
+namespace guard.Api.DTOs
 {
   public class RegisterDto
   {

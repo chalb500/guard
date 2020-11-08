@@ -8,14 +8,14 @@ namespace guard.Data
     public class UnitOfWork : IUnitOfWork
     {
         private readonly GuardDBContext _context;
-        private EmployeeRepository _employeeRepository;
+        private UserRepository _userRepository;
 
         public UnitOfWork(GuardDBContext context)
         {
             this._context = context;
         }
 
-        public IEmployeeRepository Employees => _employeeRepository ?? new EmployeeRepository(_context);
+        public IUserRepository Users => _userRepository ?? new UserRepository(_context);
 
         public async Task<int> CommitAsync()
         {
