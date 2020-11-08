@@ -1,4 +1,4 @@
-namespace server.guard.Api.DTOs
+namespace guard.Api.DTOs
 {
   public class LoginDto
   {

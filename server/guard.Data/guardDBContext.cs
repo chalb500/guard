@@ -6,7 +6,7 @@ namespace guard.Data
 {
   public class GuardDBContext : DbContext
   {
-    public DbSet<Employee> Employees { get; set; }
+    public DbSet<User> Users { get; set; }
     public GuardDBContext(DbContextOptions<GuardDBContext> options)
         : base(options)
     { }
@@ -14,7 +14,9 @@ namespace guard.Data
     protected override void OnModelCreating(ModelBuilder builder)
     {
       builder
-          .ApplyConfiguration(new EmployeeConfiguration());
+          .ApplyConfiguration(new UserConfiguration());
+      builder 
+          .ApplyConfiguration(new UserProfileConfiguration());
     }
   }
 }
